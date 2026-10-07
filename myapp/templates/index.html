@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to Home Page</h1>
+    <p>Yeh mera home page hai.</p>
+
+    <!-- Result page par jaane ke liye link -->
+    <a href="{% url 'result' %}">Click here for result</a>
+    <br></br>
+    <form action="{% url 'result' %}">
+        <br></br>
+    {% csrf_token %} 
+        <textarea cols="60" rows="10" name="article"></textarea>
+
+        <br></br>
+        <input type= "submit" value="Submit">
+        
+
+
+</form>        
+</body>
+</html>

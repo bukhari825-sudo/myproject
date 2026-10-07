@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+
+    <h1>This passage has {{ word_count }} words.</h1>
+
+    <a href="{% url 'home' %}">Click here for home</a>
+    <br><br>
+
+    {{ article }}
+
+    <br><br>
+    <h2>Total Count</h2>
+    <h2>words</h2>
+
+    {% for word, num in var_dict %}
+        <h3>{{ word }} : {{ num }}</h3>
+    {% endfor %}
+
+</body>
+</html>
